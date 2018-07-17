@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5ede2daa-be88-4317-8c49-8ce4f55cc606" ChangeDateTime="12/05/2017 18:35:07">
+    <Property Name="ElementName" Value="[dbo].[Contacts].[State]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Contacts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StateCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="aae51216-5627-4f8e-8e2e-cf234421b652" ChangeDateTime="12/05/2017 18:35:11">
+    <Property Name="ElementName" Value="[dbo].[Contacts].[Country]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Contacts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CountryCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="546755f9-29ce-4740-ba27-f1fd02ce2d77" ChangeDateTime="12/05/2017 18:35:35">
+    <Property Name="ElementName" Value="[dbo].[Contacts].[Image]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Contacts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ImageId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0bd1a36e-2026-49e9-aed4-295d36769783" ChangeDateTime="12/05/2017 18:36:51">
+    <Property Name="ElementName" Value="[dbo].[Lookup].[LKUP_TYPE]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Lookup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LookupType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="30a3e730-763b-46d1-a161-5c7b19c4a159" ChangeDateTime="12/05/2017 18:39:47">
+    <Property Name="ElementName" Value="[dbo].[ContactImage].[Exension]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ContactImage]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Extension" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="139afe0e-4f5e-45aa-b355-86ebb9e9bfe2" ChangeDateTime="12/05/2017 18:40:26">
+    <Property Name="ElementName" Value="[dbo].[ContactImage].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ContactImage]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ImageName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="04d4c502-21b3-496b-8afb-44ffb875e2ad" ChangeDateTime="12/05/2017 18:40:53">
+    <Property Name="ElementName" Value="[dbo].[Contact].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Contact]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ContactId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1404d5d8-e154-4f85-8df9-4aaf66b89e30" ChangeDateTime="12/05/2017 18:41:04">
+    <Property Name="ElementName" Value="[dbo].[Lookup].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Lookup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LookupId" />
+  </Operation>
+</Operations>

@@ -1,0 +1,14 @@
+C:\_dev\CI\ContactsDB\ContactsDB\bin\Debug\ContactsDB.dacpac
+C:\_dev\CI\ContactsDB\ContactsDB\bin\Debug\ContactsDB.dll
+C:\_dev\CI\ContactsDB\ContactsDB\bin\Debug\ContactsDB.pdb
+C:\_dev\CI\ContactsDB\ContactsDB\obj\Debug\ContactsDB.dll
+C:\_dev\CI\ContactsDB\ContactsDB\obj\Debug\ContactsDB.pdb
+C:\dev\CI\CI\ContactsDB\ContactsDB\bin\Debug\ContactsDB.dacpac
+C:\dev\CI\CI\ContactsDB\ContactsDB\bin\Debug\ContactsDB.dll
+C:\dev\CI\CI\ContactsDB\ContactsDB\bin\Debug\ContactsDB.pdb
+C:\dev\CI\CI\ContactsDB\ContactsDB\obj\Debug\ContactsDB.dll
+C:\dev\CI\CI\ContactsDB\ContactsDB\obj\Debug\ContactsDB.pdb
+C:\dev\CI\CI\ContactsDB\ContactsDB\obj\Debug\Model.xml
+C:\dev\CI\CI\ContactsDB\ContactsDB\obj\Debug\refactor.xml
+C:\dev\CI\CI\ContactsDB\ContactsDB\obj\Debug\postdeploy.sql
+C:\dev\CI\CI\ContactsDB\ContactsDB\obj\Debug\predeploy.sql

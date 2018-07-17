@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContactsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WorkPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImageId" Type="Int32" />
+    <NavigationProperty Name="ContactImage" Relationship="Self.FK_Contact_ToTable" FromRole="Contact" ToRole="ContactImage" />
+  </EntityType>
+  <EntityType Name="ContactImage">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Name="ImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contacts" Relationship="Self.FK_Contact_ToTable" FromRole="ContactImage" ToRole="Contact" />
+  </EntityType>
+  <Association Name="FK_Contact_ToTable">
+    <End Role="ContactImage" Type="Self.ContactImage" Multiplicity="0..1" />
+    <End Role="Contact" Type="Self.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContactImage">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ContactsDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="ContactImages" EntityType="Self.ContactImage" />
+    <AssociationSet Name="FK_Contact_ToTable" Association="Self.FK_Contact_ToTable">
+      <End Role="ContactImage" EntitySet="ContactImages" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

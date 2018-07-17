@@ -1,0 +1,11 @@
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\ContactsDAL.dll.config
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\ContactsDAL.dll
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\ContactsDAL.pdb
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\EntityFramework.dll
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\EntityFramework.SqlServer.dll
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\EntityFramework.xml
+C:\dev\CI\CI\ContactsDB\ContactsDAL\bin\Release\EntityFramework.SqlServer.xml
+C:\dev\CI\CI\ContactsDB\ContactsDAL\obj\Release\ContactsDAL.csproj.CoreCompileInputs.cache
+C:\dev\CI\CI\ContactsDB\ContactsDAL\obj\Release\ContactsDAL.dll
+C:\dev\CI\CI\ContactsDB\ContactsDAL\obj\Release\ContactsDAL.pdb
+C:\dev\CI\CI\ContactsDB\ContactsDAL\obj\Release\ContactsDAL.csprojResolveAssemblyReference.cache

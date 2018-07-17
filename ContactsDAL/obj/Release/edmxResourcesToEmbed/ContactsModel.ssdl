@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContactsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="50" />
+    <Property Name="WorkPhone" Type="varchar" MaxLength="50" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="StateCode" Type="char" MaxLength="2" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="3" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+    <Property Name="Latitude" Type="varchar" MaxLength="50" />
+    <Property Name="Longitude" Type="varchar" MaxLength="50" />
+    <Property Name="ImageId" Type="int" />
+  </EntityType>
+  <EntityType Name="ContactImage">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Name="ImageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Extension" Type="varchar" MaxLength="10" />
+    <Property Name="ImageName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Contact_ToTable">
+    <End Role="ContactImage" Type="Self.ContactImage" Multiplicity="0..1" />
+    <End Role="Contact" Type="Self.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContactImage">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ContactsDBModelStoreContainer">
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactImage" EntityType="Self.ContactImage" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Contact_ToTable" Association="Self.FK_Contact_ToTable">
+      <End Role="ContactImage" EntitySet="ContactImage" />
+      <End Role="Contact" EntitySet="Contact" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
